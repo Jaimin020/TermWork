@@ -1,0 +1,198 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('/assets/img/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;}
+}
+
+.data:hover{
+  border:1px solid black;
+}
+
+.info{
+  background-color:whitesmoke;
+  color:black;
+
+  padding:20px;
+}
+.carousel-item-small{
+  width:100%;
+  height:100%;
+}
+.carousel-size-small{
+  width:70%;
+  height:30.5em;
+  overflow: hidden;
+  margin:50px auto;
+
+}
+
+.scrollview {
+  height: auto;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding: 0.4em;
+
+}
+
+.centerVertical {
+  margin-bottom: auto;
+  margin-top: auto;
+
+}
+.scrollBtn {
+  width: 1em;
+  height: 1.5em;
+  z-index: 100;
+  opacity: 0.5;
+  font-size: 100%;
+  background-color: black;
+  border: 0px;
+  font-weight: bolder;
+  -moz-user-focus: ignore;
+  color: white;
+}
+
+.scrollBtn:focus {
+  outline: none;
+}
+
+.scrollBtn:hover {
+  opacity: 1;
+}
+.MusiccardHover{
+  border-radius: 5%;
+  border-bottom-color: black;
+  height: 8em;
+  width: 8em;
+  margin-right: 13em;
+}
+
+.MusiccardHover:hover {
+  transform: scale(1.1);
+
+  box-shadow: 10px 10px 5px black;
+}
+.Musiccard {
+  border-radius: 8%;
+  border-bottom-color: black;
+  height: 15em;
+  width: 20em;
+  margin: 0.2em;
+}
+.noScrolBar::-webkit-scrollbar {
+  display: none;
+}
+
+.btn{
+  border:0.5px solid black;
+  background-color: whitesmoke;
+  text-align: center;
+  width:100px;
+  height:40px;
+}
+
+.btn:hover{
+  margin:5px;
+  border:0.5px solid whitesmoke;
+  background-color:black;
+  color:whitesmoke;
+}
+
+#cd1{
+  width:20rem;
+  margin:15px;
+  margin-left: 5px;
+}
+footer {
+  text-decoration-style: solid;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: -50px;
+}
+
+.searchbar {
+  margin-top: 20px;
+  height: 60px;
+  background-color: #333333;
+  border-radius: 30px;
+  padding: 10px;
+}
+.searchbar>.search_icon {
+  color: white;
+}
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s ease-in-out;
+}
+.searchbar:hover>.search_input {
+  padding: 0 10px;
+  width: 450px;
+  caret-color: red;
+  transition: width 0.4s ease-in-out;
+}
+.searchbar:hover>.search_icon {
+  background: white;
+  color: #e74c3c;
+  cursor: pointer;
+}
+.search_icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+}

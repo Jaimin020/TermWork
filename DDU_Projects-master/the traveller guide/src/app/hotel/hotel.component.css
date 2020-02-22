@@ -1,0 +1,29 @@
+h1 {
+    margin-top: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+h2 {
+    float:left;
+    margin-left:10px;
+    margin-top:-70px;
+}
+#map0 {
+    float:right;
+    margin-left:10px;
+    margin-top:-100px;
+    position: sticky;
+    top:0;
+}
+#cd1 {
+    margin-top: 200px; margin-left: 10px;
+}
+footer {
+    text-decoration-style: solid;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+  

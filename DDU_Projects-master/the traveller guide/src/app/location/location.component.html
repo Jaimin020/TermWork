@@ -1,0 +1,107 @@
+<form>
+  <nav id="nav1" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top justify-content-end">
+    <a class="navbar-brand" href="trip" target="_blank">PLANET</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" style="cursor: pointer;" (click)="getPlace(result.city)">Places</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style="cursor: pointer;" (click)="getHotel(result.city)">Hotels</a>
+        </li>
+    </ul>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link" href="logout">Log Out</a>
+        </li>
+    </ul>
+  </nav>
+  <div style="margin-top: 60px;"></div>
+  <div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+            <input class="search_input" type="search" name="searchbox" placeholder="Search for places, hotels and more" [(ngModel)]="usearch" />
+            <a class="search_icon" (click)="user_search()"><i class="fas fa-search"></i></a>
+        </div>
+    </div>
+</div>
+  <h1 class="col-lg-12 text-center">{{result.city}}</h1>
+  <!--image slider start-->
+  <div class="pagination">
+      <img src="/assets/img/arrow_left.svg" onclick="rightscroll('#hi')" style="background-color: black;" class="centerVertical scrollBtn">
+      <div id="hi" class="scrollview noScrolBar">
+
+          <span>
+          <figure class="figure  MusiccardHover" *ngFor="let item of locateNames;" >
+              <img src={{item}} class="figure-img cover rounded Musiccard" alt="sow">
+          </figure>
+        <figure>
+            <figcaption class="figure-caption "></figcaption>
+          </figure>
+        </span>
+      </div>
+      <img src="/assets/img/arrow_right.svg" class="centerVertical scrollBtn" onclick="leftscroll('#hi')" alt="">
+  </div>
+  <!--image slider end-->
+  <div class="data" style="margin:50px 10px;">
+  <div class="info">
+      <h2>{{result.city}}</h2>
+
+      <p>{{result.city}}, in western India, is the largest city in the state of Gujarat. The Sabarmati River runs through its center. On the western bank is the Gandhi Ashram at Sabarmati, which displays the spiritual leader’s living quarters and artifacts. Across the river, the Calico Museum of Textiles, once a cloth merchant's mansion, has a significant collection of antique and modern fabrics.</p>
+      <p>In the labyrinthine alleyways of the walled old city, you’ll find temples and pols, clusters of interconnected houses with ornate wooden facades. Also here are historic mosques such as the Sidi Saiyad Masjid, with its famous lattice stone windows, and the Jumma (or Jama) Masjid, constructed from the remnants of Jain and Hindu temples in the early 1400s. Several green spaces dot the city, including Law Garden, site of a well-known clothing and crafts market. Many restaurants serve the Thali platter, Gujarat's iconic assortment of seasonal vegetarian dishes.</p>
+
+    </div>
+  </div>
+
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin:60px auto; width:1000px;">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+  <div class="carousel-inner">
+  <div class="carousel-item active" >
+    <img class="d-block w-100" src="/assets/img/image1.jpg" alt="First slide">
+  </div>
+  <div class="carousel-item" *ngFor="let item of cardNames" >
+    <img class="d-block w-100" src={{item}} alt="Second slide">
+  </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
+
+
+  <nav aria-label="Page navigation example" >
+  <ul class="pagination justify-content-center">
+
+  <li class="page-item" *ngFor="let item of cardNames;" >
+    <div class="card" id="cd1">
+    <img src={{item}} class="card-img-top" alt="Kankaria lake">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Kankaria Lake is the second largest lake in Ahmedabad, Gujarat, India. It is located in the south-eastern part of the city, in the Maninagar area. It was completed in 1451 during the reign of Sultan Qutb-ud-Din Ahmad Shah II though its origin is placed in the Chaulukya period sometimes.</p>
+      <a href="https://www.google.com/search?rlz=1C1CHBD_enIN790IN790&sxsrf=ACYBGNQXuMc0MaBGxLnrV_q7B5OTfiot7Q:1569560083497&q=ahmedabad+kankaria+lake&spell=1&sa=X&ved=0ahUKEwjY3Ov5mvDkAhXLEVAKHS3XCl8QBQgvKAA&biw=1396&bih=641" class="btn">Visit</a>
+    </div>
+  </div></li>
+  </ul>
+  </nav>
+
+  <div class="map" text-align="center">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1884810.4008771922!2d71.25003!3d22.680979!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1569565969970!5m2!1sen!2sin" width="1000" height="550"  style="display:block;margin:100px auto; border:1px solid black;" allowfullscreen=""></iframe>
+  </div>
+
+  <footer>
+    <a href="#" style="text-decoration: none;"><p>About Us</p></a>
+    <p>You Are Login As {{username}}</p>
+  </footer>
+</form>

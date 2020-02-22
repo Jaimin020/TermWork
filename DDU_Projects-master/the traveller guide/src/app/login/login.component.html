@@ -1,0 +1,33 @@
+<body>
+<form>
+  <div *ngIf="isLogin; then login else register"></div>
+  <ng-template #login>
+  <div class="container">
+      <h1><b>Login</b></h1><br>
+      <div *ngIf="!isValid; then error"></div>
+      <ng-template #error>
+          <h5 style="color: red;"> Invalid Username and Password </h5>
+      </ng-template>
+      <input class="input100" type="text" placeholder="Username" id="fname" name="fullname" [(ngModel)]="fname"/><br>
+      <input class="input100" type="password" placeholder="Password" id="pass" name="password" [(ngModel)]="pass"/><br>
+      <input class="button" type="button" value="Go" (click)="check_user()"/><br>
+      <input class="button" type="button" value="Create New Account" (click)="Register()"/>
+  </div>
+  </ng-template>
+  <ng-template #register>
+      <div class="container">
+        <h1><b>Create New Account</b></h1><br>
+        <div *ngIf="!risValid; then rerror"></div>
+        <ng-template #rerror>
+            <h5 style="color: red;"> {{msg}} </h5>
+        </ng-template>
+        <input class="input100" type="text" placeholder="Username" id="fname" name="fullname" [(ngModel)]="rfname" required/><br>
+        <input class="input100" type="password" placeholder="Password" id="pass" name="password" maxlength="10" minlength="5" [(ngModel)]="rpass" required/><br>
+        <input class="input100" type="password" placeholder="Confirm Password" id="pass" name="cpassword" maxlength="10" minlength="5" [(ngModel)]="rcpass" required/><br>
+        <input class="input100" type="email" placeholder="E-mail" id="email" name="email" [(ngModel)]="remail" required/><br>
+        <input class="button" type="button" value="Submit" (click)="register_user()"/><br>
+        <input class="button" type="button" value="Back" (click)="mlogin()"/>
+      </div>
+  </ng-template>
+</form>
+</body>
